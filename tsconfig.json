@@ -99,5 +99,8 @@
   },
   "include": [
     "./**/*.ts"
+  ],
+  "exclude": [
+    "./client/src/",
   ]
 }
