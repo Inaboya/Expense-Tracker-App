@@ -49,7 +49,6 @@ export const addTransaction = async (
       data: transaction,
     });
   } catch (error: any) {
-    console.log(error);
     if (error.name === "ValidationError") {
       const messages = Object.values(error.errors).map(
         (val: any) => val.message

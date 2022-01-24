@@ -46,7 +46,6 @@ const addTransaction = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
         });
     }
     catch (error) {
-        console.log(error);
         if (error.name === "ValidationError") {
             const messages = Object.values(error.errors).map((val) => val.message);
         }
