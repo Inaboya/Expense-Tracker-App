@@ -9,13 +9,12 @@
   "scripts": {
     "start": "node ./dist/server.js",
     "server": "nodemon ./dist/server.js",
-    "client": "yarn start --prefix client",
-    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "client": "yarn start",
     "build": "tsc",
     "test": "jest",
     "compile:watch": "yarn tsc -w",
     "clean": "rm -rf dist && mkdir dist",
-    "heroku-postbuild": "yarn clean && yarn build && YARN_CONFIG_PRODUCTION=false yarn install --prefix client && yarn build --prefix client"
+    "heroku-postbuild": "yarn clean && yarn build && yarn start"
   },
   "dependencies": {
     "@types/colors": "^1.2.1",
